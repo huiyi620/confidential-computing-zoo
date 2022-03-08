@@ -28,6 +28,7 @@ fi
 proxy_server=""
 
 DOCKER_BUILDKIT=0 docker build \
+    --no-cache \
     -f horizontal_fl.dockerfile . \
     -t horizontal_fl:${tag} \
     --network=host \
